@@ -1,0 +1,24 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+var postgraphile_core_1 = require("postgraphile-core");
+exports.SchemaBuilder = postgraphile_core_1.SchemaBuilder;
+exports.postGraphileBaseOverrides = postgraphile_core_1.postGraphileBaseOverrides;
+exports.postGraphileClassicIdsOverrides = postgraphile_core_1.postGraphileClassicIdsOverrides;
+exports.PostGraphileInflectionPlugin = postgraphile_core_1.PostGraphileInflectionPlugin;
+exports.PostGraphileClassicIdsInflectionPlugin = postgraphile_core_1.PostGraphileClassicIdsInflectionPlugin;
+var postgraphile_1 = require("./postgraphile");
+exports.postgraphile = postgraphile_1.postgraphile;
+exports.createPostGraphileSchema = postgraphile_1.createPostGraphileSchema;
+exports.watchPostGraphileSchema = postgraphile_1.watchPostGraphileSchema;
+exports.withPostGraphileContext = postgraphile_1.withPostGraphileContext;
+exports.enhanceHttpServerWithSubscriptions = postgraphile_1.enhanceHttpServerWithSubscriptions;
+// Backwards compatability
+exports.postgraphql = postgraphile_1.postgraphile;
+exports.createPostGraphQLSchema = postgraphile_1.createPostGraphileSchema;
+exports.watchPostGraphQLSchema = postgraphile_1.watchPostGraphileSchema;
+exports.withPostGraphQLContext = postgraphile_1.withPostGraphileContext;
+var pluginHook_1 = require("./postgraphile/pluginHook");
+exports.makePluginHook = pluginHook_1.makePluginHook;
+const postgraphile_2 = require("./postgraphile");
+exports.default = postgraphile_2.postgraphile;
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiaW5kZXguanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyIuLi9zcmMvaW5kZXgudHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6Ijs7QUFXQSx1REFZMkI7QUFSekIsNENBQUEsYUFBYSxDQUFBO0FBSWIsd0RBQUEseUJBQXlCLENBQUE7QUFDekIsOERBQUEsK0JBQStCLENBQUE7QUFDL0IsMkRBQUEsNEJBQTRCLENBQUE7QUFDNUIscUVBQUEsc0NBQXNDLENBQUE7QUFHeEMsK0NBV3dCO0FBVnRCLHNDQUFBLFlBQVksQ0FBQTtBQUNaLGtEQUFBLHdCQUF3QixDQUFBO0FBQ3hCLGlEQUFBLHVCQUF1QixDQUFBO0FBQ3ZCLGlEQUFBLHVCQUF1QixDQUFBO0FBQ3ZCLDREQUFBLGtDQUFrQyxDQUFBO0FBQ2xDLDBCQUEwQjtBQUMxQixxQ0FBQSxZQUFZLENBQWU7QUFDM0IsaURBQUEsd0JBQXdCLENBQTJCO0FBQ25ELGdEQUFBLHVCQUF1QixDQUEwQjtBQUNqRCxnREFBQSx1QkFBdUIsQ0FBMEI7QUFHbkQsd0RBQStFO0FBQXRFLHNDQUFBLGNBQWMsQ0FBQTtBQUV2QixpREFBOEM7QUFDOUMsa0JBQWUsMkJBQVksQ0FBQyJ9
