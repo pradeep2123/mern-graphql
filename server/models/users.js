@@ -14,11 +14,18 @@ module.exports = (sequelize, DataTypes) => {
       password: {
         allowNull: false,
         type: DataTypes.STRING
+      },
+      isVerify: {
+        type: DataTypes.BOOLEAN,
+        default: false
+      },
+      token: {
+        type: DataTypes.STRING,
+        allowNull: false
       }
     },
     {}
   );
-  console.log(users, "---users model");
   users.associate = function(models) {
     // associations can be defined here
   };

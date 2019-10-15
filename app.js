@@ -8,6 +8,7 @@ var graphiqlExpress = require("apollo-server-express");
 var { makeExecutableSchema } = require("graphql-tools");
 var graphqlHTTP = require("express-graphql");
 var { buildSchema } = require("graphql");
+require("dotenv").config();
 
 var models = require("./server/models");
 var schema = require("./server/schemas/user");
@@ -26,6 +27,7 @@ const corsOptions = {
     }
   }
 };
+console.log(process.env.SENDGRID_API_KEY, "________________________");
 app.use(cors());
 // app.use(
 //   postgraphile(

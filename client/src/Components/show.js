@@ -3,12 +3,12 @@ import { Link } from "react-router-dom";
 import "../App.css";
 import gql from "graphql-tag";
 import { Query, Mutation } from "react-apollo";
-import query from "../Query";
+import { GET_USER, DELETE_USER } from "../Query";
 class show extends Component {
   render() {
     return (
       <Query
-        query={query.GET_USER}
+        query={GET_USER}
         variables={{ email: "kumarapypradeep@gmail.com" }}
       >
         {({ loading, error, data }) => {
@@ -33,7 +33,7 @@ class show extends Component {
                     <dd>{data.email}</dd>
                   </dl>
                   <Mutation
-                    mutation={query.DELETE_USER}
+                    mutation={DELETE_USER}
                     key={data.id}
                     onCompleted={() => this.props.history.push("/create")}
                   >

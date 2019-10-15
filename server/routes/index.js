@@ -16,6 +16,7 @@ module.exports = app => {
   app.post("/api/user/signup", User.signup);
   app.post("/api/user/signin", User.signin);
   app.get("/api/user/get", Auth.sessionChecker, User.getUsers);
+  app.post("/api/user/forgot", User.checkForgotPassword);
 
   app.get("/api/customers", (req, res) => {
     const customers = [

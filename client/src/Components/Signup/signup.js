@@ -52,13 +52,7 @@ class Signup extends Component {
             password: "",
             name: ""
           });
-          alert(JSON.stringify(this.state.message));
-        } else {
-          alert("NO Data");
         }
-        // data ? data.data
-        //
-        //
       })
       .catch(error => {
         console.log(error, "Error");
@@ -119,6 +113,7 @@ class Signup extends Component {
           </NavLink>
         </Form>
         <div>{this.state.message}</div>
+        <div className="text text-danger">{this.state.error}</div>
       </Container>
     );
   }

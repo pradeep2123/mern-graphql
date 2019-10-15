@@ -27,7 +27,7 @@ class Signup extends Component {
     });
   }
 
-  onblur = e => {
+  onBlur = e => {
     let error = "";
     console.log(e.target, "EEE");
     if (e.target.name == "email") {
@@ -58,7 +58,6 @@ class Signup extends Component {
       email: this.state.email,
       password: this.state.password
     };
-    alert(JSON.stringify(this.state));
     e.preventDefault();
     axios
       .post("http://localhost:8001/api/user/signup", body)
@@ -99,7 +98,7 @@ class Signup extends Component {
               id="name"
               onChange={this.onChange}
               onBlur={e => {
-                this.onblur(e);
+                this.onBlur(e);
               }}
               value={this.state.name === null ? "" : this.state.name}
               required
@@ -114,7 +113,7 @@ class Signup extends Component {
               id="email"
               onChange={this.onChange}
               onBlur={e => {
-                this.onblur(e);
+                this.onBlur(e);
               }}
               value={this.state.email === null ? "" : this.state.email}
             />
@@ -128,7 +127,7 @@ class Signup extends Component {
               id="password"
               onChange={this.onChange}
               onBlur={e => {
-                this.onblur(e);
+                this.onBlur(e);
               }}
               value={this.state.password === null ? "" : this.state.password}
               required

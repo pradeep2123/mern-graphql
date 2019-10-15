@@ -28,6 +28,9 @@ var userType = new GraphQLObjectType({
       },
       password: {
         type: GraphQLString
+      },
+      isVerify: {
+        type: GraphQLString
       }
     };
   }
