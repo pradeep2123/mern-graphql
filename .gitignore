@@ -1,2 +1,2 @@
 .env
-.server/data/data.js
+server/config/data.js
