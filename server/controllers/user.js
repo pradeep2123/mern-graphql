@@ -8,7 +8,7 @@ var Todo = require("../models").Todo;
 var data = require("../config/data").data;
 var mail = require("../routes/mail").sendMailToNewUser;
 var moment = require("moment");
-
+var sessionStorage = require("sessionstorage");
 require("dotenv").config();
 
 const signup = function(req, res, next) {
@@ -177,10 +177,10 @@ const signin = function(req, res) {
         } else if (old_user["token"] == verify_token) {
           console.log("---------USER TOKEN MATCHED --------");
           User.update(
-            { id: user_found.id, isVerify: true },
+            { id: old_user.id, isVerify: true },
             {
               where: {
-                id: user_found.id
+                id: old_user.id
               }
             }
           )
@@ -194,7 +194,8 @@ const signin = function(req, res) {
                     expiresIn: 24 * 60 * 60
                   }
                 );
-                sessionStorage.setItem("token", token);
+                // sessionStorage.setItem("token", token);
+
                 res.send({
                   type: "Success",
                   status: 201,
@@ -222,6 +223,7 @@ const signin = function(req, res) {
       }
     })
     .catch(function(error) {
+      console.log(error, "ERRORRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRR");
       res.send({
         type: "error",
         status: 404,

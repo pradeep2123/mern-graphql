@@ -29,6 +29,7 @@
     "react-router-dom": "^5.1.2",
     "sendgrid": "^5.2.3",
     "sequelize": "^5.19.0",
+    "sessionstorage": "^0.1.0",
     "underscore": "^1.9.1"
   },
   "devDependencies": {
