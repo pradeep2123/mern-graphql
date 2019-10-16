@@ -4,7 +4,7 @@ var data = {
   password: "ahksdjkahsdjk", // TESting
   email: "p@gmail.com",
   Send_grid_api:
-    "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"
+    ""
 };
 module.exports = {
   data
