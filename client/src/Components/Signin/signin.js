@@ -66,7 +66,7 @@ class signin extends Component {
     axios.post("http://localhost:8001/api/user/signin", body).then(data => {
       if (data) {
         this.setState({
-          jwt_token: data.data.token,
+          jwt_token: data.data.token || "",
           message: data.data.message,
           status: data.data.status
         });
@@ -111,6 +111,7 @@ class signin extends Component {
               value={this.state.email === null ? "" : this.state.email}
               required
             />
+            <div className="text-danger">{this.state.email_err}</div>
           </FormGroup>
           <FormGroup>
             <Label for="name">Password</Label>
@@ -125,11 +126,12 @@ class signin extends Component {
               value={this.state.password === null ? "" : this.state.password}
               required
             />
+            <div className="text-danger">{this.state.password_err}</div>
           </FormGroup>
           <Button
             disabled={
-              this.state.emailError === false &&
-              this.state.passwordError === false
+              this.state.emailError !== false &&
+              this.state.passwordError !== false
             }
             className="btn btn-success"
           >
