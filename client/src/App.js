@@ -5,13 +5,15 @@ import "./App.css";
 // import Signup from "./Components/Signup/signup";
 import Create from "./Components/Signup/Create";
 import Table from "./Components/Table/table";
+import Fun_Table from "./Components/Table/fun_table";
 class App extends Component {
   render() {
     return (
       <div className="App">
         {/* <div className="App-header"></div> */}
         {/* <Create /> */}
-        <Table />
+        {/* <Table /> */}
+        <Fun_Table />
       </div>
     );
   }

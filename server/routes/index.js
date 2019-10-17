@@ -9,8 +9,8 @@ module.exports = app => {
   );
 
   //---------------TODO--------------------//
-  app.post("/api/todos", Auth.sessionChecker, todosController.create);
-  app.post("/api/todos/create", Auth.sessionChecker, todosController.get);
+  // app.post("/api/todos", Auth.sessionChecker, todosController.create);
+  // app.post("/api/todos/create", Auth.sessionChecker, todosController.get);
 
   //----------------USERS-----------------//
   app.post("/api/user/signup", User.signup);
